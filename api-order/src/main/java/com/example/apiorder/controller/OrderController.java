@@ -3,6 +3,8 @@ package com.example.apiorder.controller;
 import com.example.commons.dto.OrderDTO;
 import com.example.services.service.OrderService;
 import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import java.util.List;
 
@@ -16,12 +18,12 @@ public class OrderController {
     }
 
     @GetMapping
-    public List<OrderDTO> getAll() {
+    public Flux<OrderDTO> getAll() {
         return orderService.getAllOrders();
     }
 
     @PostMapping
-    public OrderDTO create(@RequestBody OrderDTO dto) {
+    public Mono<OrderDTO> create(@RequestBody OrderDTO dto) {
         return orderService.createOrder(dto);
     }
 }

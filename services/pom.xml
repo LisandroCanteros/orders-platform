@@ -16,10 +16,25 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
+        <!--  Spring Kafka  -->
         <dependency>
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
         </dependency>
+
+        <!--  Reactive Postgres  -->
+        <dependency>
+            <groupId>io.r2dbc</groupId>
+            <artifactId>r2dbc-postgresql</artifactId>
+            <version>0.8.13.RELEASE</version>
+        </dependency>
+
+        <!--  Reactive Postgres  -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-r2dbc</artifactId>
+        </dependency>
+
 
         <!-- Shared DTOS, etc -->
         <dependency>
@@ -27,6 +42,7 @@
             <artifactId>commons</artifactId>
             <version>${project.version}</version>
         </dependency>
+
     </dependencies>
 
 </project>

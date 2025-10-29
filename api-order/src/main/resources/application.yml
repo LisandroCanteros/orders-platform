@@ -1,0 +1,17 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/ordersdb
+    username: postgres
+    password: postgres
+    properties:
+      timeZone: GMT-3
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: order-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer

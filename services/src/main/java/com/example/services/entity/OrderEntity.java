@@ -6,24 +6,24 @@ import org.springframework.data.relational.core.mapping.Table;
 @Table("orders")
 public class OrderEntity {
     @Id
-    private String id;
+    private Integer id;
     private String product;
     private int quantity;
 
     public OrderEntity() {
     }
 
-    public OrderEntity(String id, String product, int quantity) {
+    public OrderEntity(Integer id, String product, int quantity) {
         this.id = id;
         this.product = product;
         this.quantity = quantity;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

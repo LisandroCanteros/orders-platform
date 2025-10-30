@@ -30,14 +30,16 @@ public class OrderService {
 
     public Mono<OrderDTO> createOrder(OrderDTO dto) {
         OrderEntity orderEntity = new OrderEntity();
-        orderEntity.setId(dto.getId());
         orderEntity.setProduct(dto.getProduct());
         orderEntity.setQuantity(dto.getQuantity());
 
         return orderRepository.save(orderEntity)
                 .map(saved -> {
-                    orderProducer.sendOrder(dto);
-                    return dto;
+                    OrderDTO orderDTO = new OrderDTO(
+                            saved.getId(), saved.getProduct(), saved.getQuantity()
+                    );
+                    orderProducer.sendOrder(orderDTO);
+                    return orderDTO;
                 });
     }
 }

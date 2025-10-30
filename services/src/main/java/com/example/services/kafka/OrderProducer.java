@@ -14,6 +14,6 @@ public class OrderProducer {
     }
 
     public void sendOrder(OrderDTO order) {
-        kafkaTemplate.send("orders-topic", order.getId(), order);
+        kafkaTemplate.send("orders-topic", order.getId().toString(), order);
     }
 }

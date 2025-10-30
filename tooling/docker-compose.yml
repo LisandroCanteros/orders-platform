@@ -8,8 +8,9 @@ services:
       POSTGRES_DB: ordersdb
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      TimeZone: UTC-3
-      POSTGRES_INITDB_ARGS: "--timezone=GMT-3"
+      TZ: America/Argentina/Buenos_Aires
+      PGTZ: America/Argentina/Buenos_Aires
+      JAVA_TOOL_OPTIONS: "-Duser.timezone=America/Argentina/Buenos_Aires"
     ports:
       - "5432:5432"
     volumes:

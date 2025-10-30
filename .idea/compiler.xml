@@ -11,5 +11,8 @@
         <module name="services" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="order-platform" target="25" />
+    </bytecodeTargetLevel>
   </component>
 </project>

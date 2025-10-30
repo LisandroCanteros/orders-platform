@@ -1,17 +1,28 @@
 spring:
+  main:
+    time-zone: America/Argentina/Buenos_Aires
+
+  sql:
+    init:
+      mode: always
+
   r2dbc:
-    url: r2dbc:postgresql://localhost:5432/ordersdb
+    url: "r2dbc:postgresql://localhost:5432/ordersdb"
     username: postgres
     password: postgres
-    properties:
-      timeZone: GMT-3
+
+
 
   kafka:
     bootstrap-servers: localhost:9092
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
     consumer:
       group-id: order-group
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.use.type.headers: true
+        spring.json.trusted.packages: com.example.commons.dto

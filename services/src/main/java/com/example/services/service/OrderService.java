@@ -1,7 +1,7 @@
 package com.example.services.service;
 
 import com.example.commons.dto.OrderDTO;
-import com.example.services.entity.OrderEntity;
+import com.example.services.domain.Order;
 import com.example.services.kafka.OrderProducer;
 import com.example.services.repository.OrderRepository;
 import org.springframework.stereotype.Service;
@@ -21,19 +21,17 @@ public class OrderService {
         this.orderProducer = orderProducer;
     }
 
-    private final List<OrderDTO> orders = new ArrayList<>();
-
     public Flux<OrderDTO> getAllOrders() {
         return orderRepository.findAll()
                 .map(e -> new OrderDTO(e.getId(), e.getProduct(), e.getQuantity()));
     }
 
     public Mono<OrderDTO> createOrder(OrderDTO dto) {
-        OrderEntity orderEntity = new OrderEntity();
-        orderEntity.setProduct(dto.getProduct());
-        orderEntity.setQuantity(dto.getQuantity());
+        Order order = new Order();
+        order.setProduct(dto.getProduct());
+        order.setQuantity(dto.getQuantity());
 
-        return orderRepository.save(orderEntity)
+        return orderRepository.save(order)
                 .map(saved -> {
                     OrderDTO orderDTO = new OrderDTO(
                             saved.getId(), saved.getProduct(), saved.getQuantity()

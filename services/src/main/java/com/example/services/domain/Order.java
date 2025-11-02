@@ -1,19 +1,19 @@
-package com.example.services.entity;
+package com.example.services.domain;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
 @Table("orders")
-public class OrderEntity {
+public class Order {
     @Id
     private Integer id;
     private String product;
     private int quantity;
 
-    public OrderEntity() {
+    public Order() {
     }
 
-    public OrderEntity(Integer id, String product, int quantity) {
+    public Order(Integer id, String product, int quantity) {
         this.id = id;
         this.product = product;
         this.quantity = quantity;

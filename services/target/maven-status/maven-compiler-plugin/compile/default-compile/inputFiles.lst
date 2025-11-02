@@ -1,4 +1,4 @@
-C:\Users\Lisandro\Documents\naranja-x\order-platform\services\src\main\java\com\example\services\entity\OrderEntity.java
+C:\Users\Lisandro\Documents\naranja-x\order-platform\services\src\main\java\com\example\services\domain\Order.java
 C:\Users\Lisandro\Documents\naranja-x\order-platform\services\src\main\java\com\example\services\kafka\OrderConsumer.java
 C:\Users\Lisandro\Documents\naranja-x\order-platform\services\src\main\java\com\example\services\kafka\OrderProducer.java
 C:\Users\Lisandro\Documents\naranja-x\order-platform\services\src\main\java\com\example\services\repository\OrderRepository.java

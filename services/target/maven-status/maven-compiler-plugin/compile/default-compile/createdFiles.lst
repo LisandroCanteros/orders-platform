@@ -1,5 +1,5 @@
-com\example\services\entity\OrderEntity.class
 com\example\services\kafka\OrderConsumer.class
 com\example\services\kafka\OrderProducer.class
 com\example\services\service\OrderService.class
+com\example\services\domain\Order.class
 com\example\services\repository\OrderRepository.class

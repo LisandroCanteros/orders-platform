@@ -13,6 +13,7 @@
         <module>commons</module>
         <module>services</module>
         <module>api-order</module>
+        <module>api-payments</module>
     </modules>
 
     <properties>

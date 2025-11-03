@@ -1,0 +1,8 @@
+com\example\payments\model\Payment.class
+com\example\payments\service\PaymentService.class
+com\example\payments\consumer\PaymentConsumer.class
+com\example\payments\service\OutboxPublisher.class
+com\example\payments\model\OutboxEvent.class
+com\example\payments\repository\OutboxRepository.class
+com\example\payments\PaymentsApplication.class
+com\example\payments\repository\PaymentRepository.class

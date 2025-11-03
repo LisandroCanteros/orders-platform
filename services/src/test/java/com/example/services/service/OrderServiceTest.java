@@ -34,9 +34,9 @@ public class OrderServiceTest {
 
     @BeforeEach
     void setUp() {
-        orderDTO = new OrderDTO(1, "Keyboard", 2);
+        orderDTO = new OrderDTO(1L, "Keyboard", 2);
         order = new Order();
-        order.setId(1);
+        order.setId(1L);
         order.setProduct("Keyboard");
         order.setQuantity(2);
     }

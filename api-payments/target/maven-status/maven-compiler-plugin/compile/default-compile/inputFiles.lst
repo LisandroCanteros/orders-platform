@@ -1,0 +1,8 @@
+C:\Users\Lisandro\Documents\naranja-x\order-platform\api-payments\src\main\java\com\example\payments\consumer\PaymentConsumer.java
+C:\Users\Lisandro\Documents\naranja-x\order-platform\api-payments\src\main\java\com\example\payments\model\OutboxEvent.java
+C:\Users\Lisandro\Documents\naranja-x\order-platform\api-payments\src\main\java\com\example\payments\model\Payment.java
+C:\Users\Lisandro\Documents\naranja-x\order-platform\api-payments\src\main\java\com\example\payments\PaymentsApplication.java
+C:\Users\Lisandro\Documents\naranja-x\order-platform\api-payments\src\main\java\com\example\payments\repository\OutboxRepository.java
+C:\Users\Lisandro\Documents\naranja-x\order-platform\api-payments\src\main\java\com\example\payments\repository\PaymentRepository.java
+C:\Users\Lisandro\Documents\naranja-x\order-platform\api-payments\src\main\java\com\example\payments\service\OutboxPublisher.java
+C:\Users\Lisandro\Documents\naranja-x\order-platform\api-payments\src\main\java\com\example\payments\service\PaymentService.java

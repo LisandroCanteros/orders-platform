@@ -29,7 +29,6 @@
             <version>0.8.13.RELEASE</version>
         </dependency>
 
-        <!--  Reactive Postgres  -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-r2dbc</artifactId>

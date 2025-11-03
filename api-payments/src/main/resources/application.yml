@@ -1,0 +1,39 @@
+spring:
+  main:
+    time-zone: America/Argentina/Buenos_Aires
+
+  sql:
+    init:
+      mode: always
+
+  r2dbc:
+    url: "r2dbc:postgresql://localhost:5432/ordersdb"
+    username: postgres
+    password: postgres
+
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: payments-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+      enable-auto-commit: true
+    listener:
+      ack-mode: record
+      retry:
+        max-attemtps: 3
+        backoff:
+          interval: 1000
+          multiplier: 2.0
+
+  logging:
+    level:
+      org.apache.kafka: WARN
+      com.example.payments: DEBUG
+      org.springframework.r2dbc: DEBUG
+
+server:
+  port: 8081

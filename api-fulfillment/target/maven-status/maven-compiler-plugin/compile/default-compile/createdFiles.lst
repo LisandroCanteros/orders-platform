@@ -1,0 +1,4 @@
+com\example\apifulfillment\consumer\FulfillmentConsumer.class
+com\example\apifulfillment\repository\FulfilledOrderRepository.class
+com\example\apifulfillment\FulfillmentApplication.class
+com\example\apifulfillment\model\FulfilledOrder.class

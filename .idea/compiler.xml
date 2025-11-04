@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="api-order" />
         <module name="services" />
+        <module name="api-fulfillment" />
         <module name="commons" />
         <module name="api-payments" />
       </profile>

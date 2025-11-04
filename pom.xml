@@ -14,6 +14,7 @@
         <module>services</module>
         <module>api-order</module>
         <module>api-payments</module>
+        <module>api-fulfillment</module>
     </modules>
 
     <properties>

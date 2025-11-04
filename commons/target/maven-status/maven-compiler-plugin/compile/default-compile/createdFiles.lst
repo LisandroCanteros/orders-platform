@@ -1,1 +1,2 @@
 com\example\commons\dto\OrderDTO.class
+com\example\commons\dto\PaymentProcessedEvent.class
